@@ -1,0 +1,29 @@
+<h1>Users</h1>
+<% i=0 %>
+<h3>Bad Way</h3>
+<p><%= @users.each{|u| u} %></p>
+<h3>Better Way</h3>
+<% while i<@users.length do %>
+<p><%= @users[i].username %> <%= @users[i].age %> <%= @users[i].email %></p>
+<% i+=1 %>
+<%end%>
+
+<h1>Cats</h1>
+<h3>Bad Way</h3>
+<p><%= @cats.each{|u| u} %></p>
+<% i=0 %>
+<h3>Better Way</h3>
+<% while i<@cats.length do %>
+<p><%= @cats[i].name %></p>
+<% i+=1 %>
+<%end%>
+
+<h1>Todos</h1>
+<h3>Bad Way</h3>
+<p><%= @todos.each{|u| u} %></p>
+<% i=0 %>
+<h3>Better Way</h3>
+<% while i<@todos.length do %>
+<p><%= @todos[i].tasks %>   <%= @todos[i].finished %></p>
+<% i+=1 %>
+<%end%>
